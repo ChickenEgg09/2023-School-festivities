@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
     }).mouseout(function(){
         $(this).find('.submenu').stop().slideUp(300);
     });
-
+    
     setInterval(function(){
         $('.slidelist').delay(3000)
         $('.slidelist').animate({marginLeft: "-100%"})

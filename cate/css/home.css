@@ -13,32 +13,38 @@ a {
     text-decoration: none;
 }
 
+.top li{
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight:bold;
+  text-align: center;
+}
+
 .top {
     width: 2000px;
-    height: 955px;
-    position: relative;
+    height: 100px;
 }
 
 .logo {
     width: 200px;
-    height: 125px;
-    position: relative;
+    height: 100px;
+    float: left;
     z-index: 1;
 }
 
 .logo img {
-    width: 175px;
-    height: 125px;
-}
-
-.bor {
-    width: 100%;
-    border-bottom: 0.5px solid #bebdbd;
+    width: 150px;
+    height: 100px;
+    margin-left: 50px;
 }
 
 .menu {
     width: 800px;
-    height: 70px;
+    height: 100px;
+    float: left;
     position: relative;
     z-index: 1;
 }
@@ -47,7 +53,7 @@ a {
     width: 200px;
     height: 40px;
     float: left;
-    margin-top: 30px;
+    margin-top: 45px;
 }
 
 .navi>li>a {
@@ -94,23 +100,93 @@ a {
 
 .imgslide {
     width: 100%;
-    height: 759px;
-    position: absolute;
+    height: 855px;
+    position: relative;
     overflow: hidden;
 }
 
 .slidelist img {
     width: calc(100% / 3);
-    height: 759px;
+    height: 855px;
     float: left;
 }
 
 .slidelist {
     width: 300%;
-    height: 759px;
+    height: 855px;
 }
 
-#section3 {
+#section1 {
+    background-color: #FFFAF0;
+}
+
+.contents {
+    width: 1500px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.con-title {
+    margin-bottom: 2rem;
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.con-title>h1 {
+    margin-bottom: 1.5rem;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.line-under {
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.con-row {
+    width: 1500px;
+    height: 176px;
+}
+
+.row-wr{
+    width: 300px;
+    height: 176px;
+    float: left;
+    margin: 0 25px;
+    background-color: #e9d3de;
+}
+
+.row-wr li {
+    width: 235px;
+    height: 130px;
+    margin-top: 30px;
+}
+
+.row-wr li a {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 23px;
+    font-weight: 800;
+    color: #333;
+    height: 50px;
+}
+
+.row-wr span {
+    font-size: 16px;
+    left: 0;
+    bottom: 0;
+    font-weight: 100;
+}
+
+#section2 {
     width: 100%;
     height: 240px;
     background-color: #5c2d16;
