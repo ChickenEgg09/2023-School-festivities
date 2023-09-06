@@ -21,15 +21,14 @@ a {
 
 .logo {
     width: 200px;
-    height: 150px;
+    height: 125px;
     position: relative;
     z-index: 1;
 }
 
 .logo img {
-    width: 200px;
-    height: 150px;
-    margin-left: 20px;
+    width: 175px;
+    height: 125px;
 }
 
 .bor {
@@ -56,7 +55,8 @@ a {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    font-size: 17px;
+    font-weight: bold;
+    font-size: 20px;
     color: black;
 }
 
@@ -90,6 +90,24 @@ a {
     font-weight: bold;
     color: black;
     background-color: rgb(204, 208, 210);
+}
+
+.imgslide {
+    width: 100%;
+    height: 759px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.slidelist img {
+    width: calc(100% / 3);
+    height: 759px;
+    float: left;
+}
+
+.slidelist {
+    width: 300%;
+    height: 759px;
 }
 
 #section3 {
