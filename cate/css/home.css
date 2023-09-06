@@ -172,18 +172,22 @@ a {
 
 .row-wr li a {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 23px;
+    height: 40px;
+    line-height: 40px;
     font-weight: 800;
     color: #333;
-    height: 50px;
+}
+
+.row-wr li a:hover {
+    color: red;
 }
 
 .row-wr span {
     font-size: 16px;
     left: 0;
-    bottom: 0;
-    font-weight: 100;
+    font-weight: 100px;
 }
 
 #section2 {
