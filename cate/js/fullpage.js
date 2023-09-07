@@ -145,7 +145,7 @@
     var isMacDevice = /(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent); // @ts-ignore
 
     var isTouch = 'ontouchstart' in win || navigator.msMaxTouchPoints > 0 || navigator.maxTouchPoints;
-    var isIE11 = !!window.MSInputMethodContext && !!document.documentMode; // taken from https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution/modal.js
+    var isIE11 = !!window.MSInputMethodContext && !!document.documentMode; // taken from https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keynoti-traps/solution/modal.js
 
     var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]'; // cache common elements
 
@@ -1133,7 +1133,7 @@
       touchWrapper: null,
       bigSectionsDestination: null,
       //Accessibility
-      keyboardScrolling: true,
+      keynotiScrolling: true,
       animateAnchor: true,
       recordHistory: true,
       allowCorrectDirection: false,
@@ -1979,8 +1979,8 @@
     };
     isScrollAllowed.k = deepExtend({}, isScrollAllowed.m);
     /**
-    * Allowing or disallowing the mouse/swipe scroll in a given direction. (not for keyboard)
-    * @param type m (mouse) or k (keyboard)
+    * Allowing or disallowing the mouse/swipe scroll in a given direction. (not for keynoti)
+    * @param type m (mouse) or k (keynoti)
     */
 
     function setIsScrollAllowed(value, direction, type) {
@@ -2858,8 +2858,8 @@
           return false;
         }
       },
-      preventScrollWithKeyboard: function preventScrollWithKeyboard(e) {
-        if (!isInsideInput() && getOptions().keyboardScrolling) {
+      preventScrollWithKeynoti: function preventScrollWithKeynoti(e) {
+        if (!isInsideInput() && getOptions().keynotiScrolling) {
           var directionKeys = [38, 33, 32, 40, 34, 36, 35];
 
           if (directionKeys.indexOf(e.keyCode) > -1 && !scrollOverflowHandler.isInnerScrollAllowed) {
@@ -2956,7 +2956,7 @@
         item.addEventListener('wheel', scrollOverflowHandler.preventScrollWithMouseWheel, {
           passive: false
         });
-        item.addEventListener('keydown', scrollOverflowHandler.preventScrollWithKeyboard, {
+        item.addEventListener('keydown', scrollOverflowHandler.preventScrollWithKeynoti, {
           passive: false
         });
       },
@@ -4228,11 +4228,11 @@
       clearTimeout(g_keydownId);
       var keyCode = e.keyCode;
       var isPressingHorizontalArrows = [37, 39].indexOf(keyCode) > -1;
-      var canScrollWithKeyboard = getOptions().autoScrolling || getOptions().fitToSection || isPressingHorizontalArrows; //tab?
+      var canScrollWithKeynoti = getOptions().autoScrolling || getOptions().fitToSection || isPressingHorizontalArrows; //tab?
 
       if (keyCode === 9) {
         onTab(e);
-      } else if (!isInsideInput() && getOptions().keyboardScrolling && canScrollWithKeyboard) {
+      } else if (!isInsideInput() && getOptions().keynotiScrolling && canScrollWithKeynoti) {
         g_controlPressed = e.ctrlKey;
         g_keydownId = setTimeout(function () {
           onkeydown(e);
@@ -4364,7 +4364,7 @@
     /**
     * Makes sure the tab key will only focus elements within the current section/slide
     * preventing this way from breaking the page.
-    * Based on "Modals and keyboard traps"
+    * Based on "Modals and keynoti traps"
     * from https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex
     */
 
@@ -4493,7 +4493,7 @@
       return !destinationItemSlide && !destinationItemSection;
     }
 
-    function shouldCancelKeyboardNavigation(e) {
+    function shouldCancelKeynotiNavigation(e) {
       // https://keycode.info/for/34
       // 40 = arrow down
       // 38 = arrow up
@@ -4506,7 +4506,7 @@
 
 
     function cancelDirectionKeyEvents(e) {
-      if (shouldCancelKeyboardNavigation(e) && !closest(e.target, OVERFLOW_SEL)) {
+      if (shouldCancelKeynotiNavigation(e) && !closest(e.target, OVERFLOW_SEL)) {
         e.preventDefault();
       }
     }
@@ -4881,7 +4881,7 @@
             window.requestAnimationFrame(function () {
               // on Android devices the browser scrolls to the focused element
               // messing up the whole page structure. So we need to update the
-              // translate3d value when the keyboard shows/hides
+              // translate3d value when the keynoti shows/hides
               if (getOptions().autoScrolling && !getOptions().scrollBar) {
                 setState({
                   isResizing: true
@@ -4917,7 +4917,7 @@
       responsive(); // rebuild immediately on touch devices
 
       if (isTouchDevice) {
-        var activeElement = doc.activeElement; //if the keyboard is NOT visible
+        var activeElement = doc.activeElement; //if the keynoti is NOT visible
 
         if (!matches(activeElement, 'textarea') && !matches(activeElement, 'input') && !matches(activeElement, 'select')) {
           var currentHeight = getWindowHeight(); //making sure the change in the viewport size is enough to force a rebuild. (20 % of the window to avoid problems when hidding scroll bars)
@@ -5486,12 +5486,12 @@
     }();
 
     //@ts-check
-    FP.setKeyboardScrolling = setKeyboardScrolling;
+    FP.setKeynotiScrolling = setKeynotiScrolling;
     /**
-    * Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys
+    * Adds or remove the possibility of scrolling through sections by using the keynoti arrow keys
     */
 
-    function setKeyboardScrolling(value, directions) {
+    function setKeynotiScrolling(value, directions) {
       if (typeof directions !== 'undefined') {
         directions = directions.replace(/ /g, '').split(',');
         directions.forEach(function (direction) {
@@ -5499,7 +5499,7 @@
         });
       } else {
         setIsScrollAllowed(value, 'all', 'k');
-        getOptions().keyboardScrolling = value;
+        getOptions().keynotiScrolling = value;
       }
     }
 
@@ -5783,7 +5783,7 @@
       setAutoScrolling(false, 'internal');
       setAllowScrolling(true);
       setMouseHijack(false);
-      setKeyboardScrolling(false);
+      setKeynotiScrolling(false);
       addClass(getContainer(), DESTROYED);
       EventEmitter.emit(events.onDestroy); //lets make a mess!
 
