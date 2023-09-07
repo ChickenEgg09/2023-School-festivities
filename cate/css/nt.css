@@ -354,7 +354,7 @@ footer {
 }
 
 .nt-wrap a:hover {
+    background-color: white;
     color: blue;
     font-weight: bold;
-    font-size: 23px;
 }
