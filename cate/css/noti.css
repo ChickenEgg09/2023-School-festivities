@@ -90,6 +90,19 @@
     text-align: center;
 }
 
+.noti-list .title a {
+    display: inline-block;
+    max-width: calc(100% - 60px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.noti-list .title a:hover {
+    border-bottom: 1px solid blue;
+    color: blue;
+}
+
 .noti-list .writer {
     width: 150px;
     
