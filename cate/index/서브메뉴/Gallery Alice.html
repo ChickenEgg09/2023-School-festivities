@@ -7,6 +7,16 @@
     <link rel="stylesheet" type="text/css" href="../../css/home.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../../js/home.js"></script>
+    <script type="text/javascript" src="../../js/noti.js"></script>
+    <style>
+        /* CSS 스타일링은 이 부분에 추가하십시오. */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,19 +32,19 @@
                 <li>
                     <nav class="menu">
                         <ul class="navi">
-                            <li class="active"><a href="인사말.html">Gallery Alice</a>
+                            <li class="active"><a href="Gallery Alice.html">Gallery Alice</a>
                                 <ul class="submenu">
-                                    <li><a href="인사말.html">인사말</a></li>
-                                    <li><a href="오시는 길.html">오시는 길</a></li>
+                                    <li id="tabHello"><a href="">인사말</a></li>
+                                    <li id="tabDirections"><a href="">오시는 길</a></li>
                                 </ul>
                             </li>
                             <li><a href="메뉴판.html">MENU</a>
                             </li>
-                            <li><a href="게시판.html">커뮤니티</a>
+                            <li><a href="커뮤니티.html">커뮤니티</a>
                                 <ul class="submenu">
-                                    <li><a href="게시판.html">게시판</a></li>
-                                    <li><a href="공지사항.html">공지사항</a></li>
-                                    <li><a href="Q&A.html">Q&A</a></li>
+                                    <li><a href="커뮤니티.html">게시판</a></li>
+                                    <li><a href="커뮤니티.html">공지사항</a></li>
+                                    <li><a href="커뮤니티.html">Q&A</a></li>
                                 </ul>
                             </li>
                             <li><a href="행사&교육.html">행사&교육</a>
@@ -42,15 +52,19 @@
                         </ul>
                     </nav>
                 </li>
+                <li class="login">
+                    <a href="../가입/membership.html">로그인/회원가입</a>
+                </li>
             </ul>
         </div>
     </header>
+
     <div class="bgi">
-        <a href="#"><img src="../../images/galleryalice2.png" alt="갤러리앨리스"></a>
+        <img src="../../images/galleryalice2.png" alt="갤러리앨리스">
     </div>
     <div class="wrp">
-        <div class="wrappers">
-            <div class="Hello">
+        <div class="wrapper">
+            <div class="Hello tab-content active">
                 <div class="Hello-title">
                     <h1>인사말</h1>
                 </div>
@@ -67,8 +81,18 @@
                     <img src="../../images/galleryAlice.png" alt="갤러리앨리스">
                 </div>
             </div>
+            <div class="Directions tab-content">
+                <div class="if-title">
+                    <p>찾아오시는 길</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.8022999133755!2d126.84812367643154!3d37.41814753262219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b61f7aaaaaaab%3A0x9a7f79556fd8b881!2z6rCk65-s66asIOyVqOumrOyKpA!5e0!3m2!1sko!2skr!4v1694046905955!5m2!1sko!2skr" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="if-main">
+                    <p>경기도 광명시 가학로15번길 14-3</p>
+                </div>
+            </div>
         </div>
     </div>
+
     <footer>
         <div class="bottom">
             <div class="btlogo">
@@ -91,5 +115,46 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabHello = document.getElementById("tabHello");
+            const tabDirections = document.getElementById("tabDirections");
+            const helloContent = document.querySelector(".tab-content.Hello");
+            const directionsContent = document.querySelector(".tab-content.Directions");
+
+            // 인사말 탭을 클릭했을 때의 동작
+            tabHello.addEventListener("click", function (e) {
+                e.preventDefault(); // 기본 링크 동작 방지
+
+                // 인사말 탭을 활성화하고 오시는 길 탭을 비활성화
+                tabHello.classList.add("active");
+                tabDirections.classList.remove("active");
+
+                // 인사말 내용을 표시하고 오시는 길 내용을 숨김
+                helloContent.classList.add("active");
+                directionsContent.classList.remove("active");
+
+                // 인사말 섹션으로 스크롤
+                document.getElementById("hello-section").scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // 오시는 길 탭을 클릭했을 때의 동작
+            tabDirections.addEventListener("click", function (e) {
+                e.preventDefault(); // 기본 링크 동작 방지
+
+                // 오시는 길 탭을 활성화하고 인사말 탭을 비활성화
+                tabHello.classList.remove("active");
+                tabDirections.classList.add("active");
+
+                // 오시는 길 내용을 표시하고 인사말 내용을 숨김
+                helloContent.classList.remove("active");
+                directionsContent.classList.add("active");
+
+                // 오시는 길 섹션으로 스크롤
+                document.getElementById("directions-section").scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -358,3 +358,27 @@ footer {
     color: blue;
     font-weight: bold;
 }
+
+.top li:nth-child(3) {
+    width: 200px;
+    float: right;
+}
+
+.login {
+    margin-top: 55px;
+    margin-right: 40px;
+    background-color: rgb(249, 63, 76);
+    border: 2px solid white;
+    border-radius: 150px;
+    align-self: center;
+    width: 150px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out 0.1s;
+}
+.login:hover {
+    background-color: yellow;
+    color: rgb(249, 63, 76);
+}

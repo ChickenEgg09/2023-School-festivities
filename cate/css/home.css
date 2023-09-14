@@ -27,6 +27,11 @@ body {
   text-align: center;
 }
 
+.top li:nth-child(3) {
+    width: 200px;
+    float: right;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -119,6 +124,25 @@ header {
     font-weight: bold;
     color: black;
     background-color: rgb(204, 208, 210);
+}
+
+.login {
+    margin-top: 55px;
+    margin-right: 40px;
+    background-color: rgb(249, 63, 76);
+    border: 2px solid white;
+    border-radius: 150px;
+    align-self: center;
+    width: 150px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out 0.1s;
+}
+.login:hover {
+    background-color: yellow;
+    color: rgb(249, 63, 76);
 }
 
 .imgslide {
@@ -301,9 +325,8 @@ iframe {
 }
 
 .if-title {
-    font-size: 27px;
+    font-size: 30px;
     font-weight: bold;
-    margin-top:70px;
     margin-bottom: 30px;
     text-align: center;
 }
