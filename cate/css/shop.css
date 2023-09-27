@@ -14,7 +14,7 @@ a {
 }
 
 body {
-    padding-top: 100px;
+    padding-top: 130px;
 }
 
 .top li{
@@ -45,9 +45,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     border-bottom: 1px solid gray;
-  }
+}
 
 .top {
     width: 2000px;
@@ -148,208 +147,6 @@ header {
     color: rgb(249, 63, 76);
 }
 
-.imgslide {
-    width: 100%;
-    height: 855px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slidelist img {
-    width: calc(100% / 3);
-    height: 855px;
-    float: left;
-}
-
-.slidelist {
-    width: 300%;
-    height: 855px;
-}
-
-.bgi {
-    width: 100%;
-    height: 300px;
-}
-
-.bgi img {
-    width: 100%;
-    height: 300px;
-}
-
-.nog {
-    width: 100%;
-    height: 500px;
-}
-
-.nog img {
-    width: 100%;
-    height: 500px;
-}
-
-#section1 {
-    background-color: #FFFAF0;
-}
-
-.contents {
-    width: 1500px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.con-title {
-    margin-bottom: 2rem;
-    font-size: 18px;
-    margin-left: 25px;
-}
-
-.con-title>h1 {
-    margin-bottom: 1.5rem;
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.line-under {
-    position: relative;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.con-row {
-    width: 1500px;
-    height: 176px;
-}
-
-.row-wr{
-    width: 300px;
-    height: 176px;
-    float: left;
-    margin: 0 25px;
-    background-color: #e9d3de;
-}
-
-.row-wr li {
-    width: 235px;
-    height: 130px;
-    margin-top: 30px;
-}
-
-.row-wr li a {
-    display: block;
-    margin-bottom: 2rem;
-    font-size: 23px;
-    height: 40px;
-    line-height: 40px;
-    font-weight: 800;
-    color: #333;
-}
-
-.row-wr li a:hover {
-    color: red;
-}
-
-.row-wr span {
-    font-size: 16px;
-    left: 0;
-    font-weight: 100px;
-}
-
-.wrpp {
-    width: 100%;
-    height: 700px;
-    background-color: #FFFAF0;
-}
-
-.wrp {
-    width: 100%;
-    background-color: #FFFAF0;
-}
-
-.wrappers {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #FFFAF0;
-}
-
-.wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #FFFAF0;
-}
-
-.menu-img {
-    width: 840px;
-}
-
-.menu-img img {
-    margin-top: 30px;
-    width: 400px;
-    height: 700px;
-    justify-content: center;
-}
-
-.menu-img img:last-child {
-    width: 400px;
-    height: 300px;
-    display: flex;
-    margin-bottom: 30px;
-}
-
-.Hello-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.Hello-main {
-    font-size: 17px;
-    font-weight: 100px;
-}
-
-.Hello-img img {
-    width: 1000px;
-    height: 500px;
-}
-
-iframe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.if-title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.if-main {
-    width: 700px;
-    margin-top: 30px;
-}
-
-.if-main p {
-    font-size: 23px;
-    color: blue;
-}
-
-#section2 {
-    width: 100%;
-    height: 240px;
-    background-color: #5c2d16;
-}
-
 footer {
     background-color: #5c2d16;
 }
@@ -410,4 +207,60 @@ footer {
     float: left;
     border-top: 0.5px solid rgb(218, 216, 216);
     text-align: center;
+}
+
+article {
+    height: 100%;
+    margin: 0 auto;
+    width: 1200px;
+    background-color: beige;
+    padding-bottom: 12px;
+}
+
+#banner {
+    height: 200px;
+}
+
+#banner > img {
+    width: 100%;
+    height: 200px;
+}
+
+article > h1 {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.product-card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 12px;
+    margin: 10px 18px 10px 18px;
+}
+
+.product-img {
+    width: 100%;
+    height: 217px;
+    border-radius: 12px;
+}
+
+.product-contents {
+    flex-direction: column;
+    padding: 8px;
+}
+
+.product-name {
+    font-size: 15px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 600;
 }
