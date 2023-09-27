@@ -74,7 +74,7 @@ header {
 }
 
 .menu {
-    width: 800px;
+    width: 1000px;
     height: 100px;
     float: left;
     position: relative;
@@ -104,7 +104,8 @@ header {
     font-weight: bold;
 }
 
-.navi>li.active {
+.navi>li.active>a{
+    color: red;
     border-bottom: 2px solid blue;
 }
 

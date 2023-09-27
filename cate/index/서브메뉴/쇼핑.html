@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인사말</title>
-    <link rel="stylesheet" type="text/css" href="../../css/menu.css ">
+    <title>쇼핑</title>
+    <link rel="stylesheet" type="text/css" href="../../css/home.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../../js/home.js"></script>
-    <script type="text/javascript" src="../../js/menu.js"></script>
 </head>
 <body>
     <header>
@@ -24,9 +23,9 @@
                     <nav class="menu">
                         <ul class="navi">
                             <li><a href="인사말.html" onMouseOver='this.innerHTML="ABOUT"' onMouseOut='this.innerHTML="인사말"'>인사말</a></li>
-                            <li><a href="쇼핑.html" onMouseOver='this.innerHTML="SHOP"' onMouseOut='this.innerHTML="쇼핑"'>쇼핑</a></li>
+                            <li class="active"><a href="쇼핑.html" onMouseOver='this.innerHTML="SHOP"' onMouseOut='this.innerHTML="쇼핑"'>쇼핑</a></li>
                             <li><a href="오시는 길.html" onMouseOver='this.innerHTML="WAY TO COME"' onMouseOut='this.innerHTML="오시는 길"'>오시는 길</a></li>
-                            <li class="active"><a href="메뉴판.html" onMouseOver='this.innerHTML="MENU"' onMouseOut='this.innerHTML="메뉴"'>메뉴</a></li>
+                            <li><a href="메뉴판.html" onMouseOver='this.innerHTML="MENU"' onMouseOut='this.innerHTML="메뉴"'>메뉴</a></li>
                             <li><a href="게시판.html" onMouseOver='this.innerHTML="COMMUNITY"' onMouseOut='this.innerHTML="커뮤니티"'>커뮤니티</a></li>
                                 <ul class="submenu">
                                     <li><a href="게시판.html">게시판</a></li>
@@ -44,23 +43,6 @@
             </ul>
         </div>
     </header>
-    <div class="wrp">
-        <div class="wrapper">
-            <div class="menu-eat">  
-                <div class="menuItem" onclick="changePage('커피')">커피</div>
-                <div class="menuItem" onclick="changePage('라떼')">라떼</div>
-                <div class="menuItem" onclick="changePage('과일 쥬스')">과일 쥬스</div>
-                <div class="menuItem" onclick="changePage('스무디')">스무디</div>
-                <div class="menuItem" onclick="changePage('아이스크림')">아이스크림</div>
-                <div class="menuItem" onclick="changePage('티 & 허브티')">티 & 허브티</div>
-                <div class="menuItem" onclick="changePage('디저트')">디저트</div>
-                <div class="menuItem" onclick="changePage('식사와 안주')">식사와 안주</div>
-            </div>
-            <div id="content">
-                <!-- 여기에 메뉴 내용을 표시합니다. 초기 내용은 비어 있습니다. -->
-            </div>
-        </div>
-    </div>
     <footer>
         <div class="bottom">
             <div class="btlogo">
