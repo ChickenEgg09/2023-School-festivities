@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    font-family: "맑은 고딕";
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.wrp {
+    width: 100%;
+    background-color: #FFFAF0;
+}
+
+.wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    height: 750px;
+    margin: 0 auto;
+    background-color: #FFFAF0;
+}
+
+.menu-eat {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+}
+
+/* 메뉴 항목 스타일링 */
+.menuItem {
+	color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.menuItem:hover {
+    color: #FF6347; /* 호버 시 텍스트 색상 변경 */
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+#content {
+    margin: 20px;
+    font-size: 18px;
+}
+
+#content img {
+    width: 130px;
+    height: 130px;
+}
+
+/* 커피 메뉴 스타일링 */
+#content ul {
+    list-style-type: none;
+}
+
+#content ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#content ul li:hover {
+    color: #FF6347; /* 호버 시 텍스트 색상 변경 */
+}
+
+#selectedCoffeeInfo {
+    margin-top: 20px;
+    font-size: 18px;
+}
