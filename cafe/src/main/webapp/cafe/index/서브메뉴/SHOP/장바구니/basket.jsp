@@ -27,7 +27,7 @@
                 <li>
                     <div class="logo">
                         <a href="../../../home.jsp">
-                            <img src="../../../../images/logo.png" alt="로고">
+                            𝓖𝓪𝓵𝓵𝓮𝓻𝔂 𝓐𝓵𝓲𝓬𝓮
                         </a>
                     </div>
                 </li>

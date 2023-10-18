@@ -142,7 +142,7 @@ try{
         <td width="64%">&nbsp;</td>
         <td width="12%"><a href="#" onClick="check();"><img src="image/ok.gif" border="0"></a></td>
         <td width="12%"><a href="#" onClick="history.go(-1)"><img src="image/cancle.gif" border="0"></td>
-        <td width="12%"><A href="freeboard_list.jsp?go=<%=request.getParameter("page") %>"> <img src="image/list.jpg" border=0></a></td>
+        <td width="12%"><A href="°Ô½ÃÆÇ.jsp?go=<%=request.getParameter("page") %>"> <img src="image/list.jpg" border=0></a></td>
        </tr>
       </table>
      </td>

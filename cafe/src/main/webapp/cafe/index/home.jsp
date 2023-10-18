@@ -16,9 +16,6 @@
 <body>
     <%@ include file="Header.jsp" %>
     <div id="fullpage">
-    
-    𝓖𝓪𝓵𝓵𝓮𝓻𝔂 𝓐𝓵𝓲𝓬𝓮
-    
         <div class="section active" id="section0">
             <nav class="menu"></nav>
             <div class="imgslide">

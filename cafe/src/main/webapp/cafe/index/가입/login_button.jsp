@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
@@ -10,45 +9,62 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-	String joinName = request.getParameter("join_name");
-	String joinEmail = request.getParameter("join_email");
-	String joinPwd = request.getParameter("join_pwd");
+    <%
+    String joinName = request.getParameter("join_name");
+    String joinEmail = request.getParameter("join_email");
+    String joinPwd = request.getParameter("join_pwd");
 
-	/*out.print("이름 : " + joinName);   
-	 out.print("email : " + joinEmail);
-	 out.print("pwd : " + joinPwd);*/
+    if (joinName == null || joinEmail == null || joinPwd == null || joinName.trim().isEmpty() || joinEmail.trim().isEmpty() || joinPwd.trim().isEmpty()) {
+        %>
+        <script type="text/javascript" charset="utf-8">
+            alert('필수 입력란을 모두 작성해 주세요.');
+            location.href = "./login.jsp"; // Replace with the correct page
+        </script>
+        <%
+    } else {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
+        String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+        String dbId = "scott";
+        String dbPass = "tiger";
 
-	String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
-	String dbId = "scott";
-	String dbPass = "tiger";
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
 
-	Class.forName("oracle.jdbc.driver.OracleDriver");
-	conn = DriverManager.getConnection(jdbcUrl, dbId, dbPass);
-	String sql = "insert into members values ('" + joinName + "', '" + joinEmail + "', '" + joinPwd + "')";
-	//out.print("sql: " + sql);
+            String sql = "insert into members values (?, ?, ?)";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, joinName);
+            pstmt.setString(2, joinEmail);
+            pstmt.setString(3, joinPwd);
 
-	//String sql = "insert into member values ('?', '?', '?')";
-	pstmt = conn.prepareStatement(sql);
-	//pstmt.setString(1, joinName);
-	//pstmt.setString(2, joinPwd);
-	//pstmt.setString(3, joinEmail);
+            int rowsAffected = pstmt.executeUpdate();
 
-	pstmt.executeUpdate(sql);
+            pstmt.close();
+            conn.close();
 
-	pstmt.close();
-	conn.close();
-	%>
-
-	<script type="text/javascript" charset="utf-8">
-		
-	<%out.print("alert('" + joinName + "님 환영합니다!');");%>
-		location.href = "./login.jsp";
-	</script>
-
+            if (rowsAffected > 0) {
+                %>
+                <script type="text/javascript" charset="utf-8">
+                    alert('<%= joinName %>님 환영합니다!');
+                    location.href = "./login.jsp"; // Redirect to the desired page
+                </script>
+                <%
+            } else {
+                %>
+                <script type="text/javascript" charset="utf-8">
+                    alert('데이터를 삽입하지 못했습니다. 다시 시도해 주세요.');
+                    location.href = "./login.jsp"; // Replace with the correct page
+                </script>
+                <%
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception as needed, e.g., display an error message or log it.
+        }
+    }
+    %>
 </body>
 </html>

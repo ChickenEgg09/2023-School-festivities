@@ -127,7 +127,6 @@ a {
 
 .wrpp {
     width: 100%;
-    height: 700px;
     background-color: #FFFAF0;
 }
 
@@ -150,24 +149,6 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     background-color: #FFFAF0;
-}
-
-.menu-img {
-    width: 840px;
-}
-
-.menu-img img {
-    margin-top: 30px;
-    width: 400px;
-    height: 700px;
-    justify-content: center;
-}
-
-.menu-img img:last-child {
-    width: 400px;
-    height: 300px;
-    display: flex;
-    margin-bottom: 30px;
 }
 
 .Hello-title {

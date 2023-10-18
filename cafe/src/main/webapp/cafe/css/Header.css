@@ -74,10 +74,22 @@ header {
     z-index: 1;
 }
 
-.logo img {
-    width: 150px;
-    height: 100px;
-    margin-left: 50px;
+.logo a {
+    width: 400px;
+    height: 50px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+   	margin-left: 35px;
+   	transition: 0.3s;
+}
+
+.logo a:hover {
+	transition: 0.7s ease-out;
+	transform: scale(1.2); /* 이미지 크기 확대 */
+	text-align: center;
+    opacity : 0.7;
 }
 
 .menu {
@@ -113,14 +125,16 @@ header {
     font-weight: bold;
     font-size: 20px;
     color: black;
+    transition: 0.3s;
 }
 
 .navi li a:hover {
     color: white;
     transform: scale(1.2); /* 이미지 크기 확대 */
-    transition: transform 0.3s; /* 부드러운 애니메이션 효과 추가 */
     background-color: black;
     font-weight: bold;
+   	transition: 0.7s ease-out;
+    opacity : 0.3;
 }
 
 .navi li.active a {
@@ -140,12 +154,14 @@ header {
     padding: 8px 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: 0.3s;
 }
 
 .login:hover {
     background-color: yellow;
-    color: rgb(249, 63, 76);
-  	transform: scale(1.2); /* 이미지 크기 확대 */
-    transition: transform 0.3s; /* 부드러운 애니메이션 효과 추가 */
+    color: rgb(0, 0, 0);
+  	transition: 0.7s ease-out;
+	transform: scale(1.2); /* 이미지 크기 확대 */
+	text-align: center;
+    opacity : 0.7;
 }

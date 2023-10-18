@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+}
+
+tr.ex {
+    height: 120px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ez font{
+	font-size: 23px;
+	font-weight: bold;
+	margin-left: 13px;
+}
+
+.de {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}

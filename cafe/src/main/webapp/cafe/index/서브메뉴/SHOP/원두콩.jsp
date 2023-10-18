@@ -24,8 +24,8 @@
             <ul>
                 <li>
                     <div class="logo">
-                        <a href="../home.jsp">
-                            <img src="../../../images/logo.png" alt="로고">
+                        <a href="../../home.jsp">
+                            𝓖𝓪𝓵𝓵𝓮𝓻𝔂 𝓐𝓵𝓲𝓬𝓮
                         </a>
                     </div>
                 </li>
@@ -33,7 +33,7 @@
                     <nav class="menu" style="width: 1040px;">
                         <ul class="navi">
                             <li style="width: 200px;"><a href="../인사말.jsp" onMouseOver='this.innerHTML="ABOUT"' onMouseOut='this.innerHTML="인사말"'>인사말</a></li>
-                            <li style="width: 200px;" class="active"><a href="쇼핑.jsp" onMouseOver='this.innerHTML="SHOP"' onMouseOut='this.innerHTML="쇼핑"'>쇼핑</a></li>
+                            <li style="width: 200px;" class="active"><a href="../쇼핑.jsp" onMouseOver='this.innerHTML="SHOP"' onMouseOut='this.innerHTML="쇼핑"'>쇼핑</a></li>
                             <li style="width: 40px;"><a href="장바구니/basket.jsp" style="width: 40px; height: 40px; margin: 0 20px;"><img style="width: 40px; height: 40px" src="../../../images/장바구니.jpg"></a>
                             <li style="width: 200px;"><a href="../메뉴판.jsp" onMouseOver='this.innerHTML="MENU"' onMouseOut='this.innerHTML="메뉴"'>메뉴</a></li>
                             <li style="width: 200px;"><a href="../게시판.jsp" onMouseOver='this.innerHTML="COMMUNITY"' onMouseOut='this.innerHTML="커뮤니티"'>커뮤니티</a></li>
