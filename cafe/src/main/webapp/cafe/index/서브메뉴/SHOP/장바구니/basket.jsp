@@ -93,7 +93,7 @@
                         <img src="../../../../images/원두콩.png" width="60">
                     </div>
                     <div class="pname">
-                        <span>[갤러리 앨리스] 10월 원두콩</span>
+                        <span>[갤러리 앨리스] 10월 원두콩<br><br>에스프레소 / 500g</span>
                     </div>
                 </div>
                 <div class="subdiv">
@@ -124,7 +124,7 @@
                             onclick="javascript:basket.checkItem();">&nbsp;</div>
                     <div class="img"><img src="../../../../images/가을 블렌드.png" width="60"></div>
                     <div class="pname">
-                        <span>단풍 블렌드</span>
+                        <span>단풍 블렌드<br><br>에스프레소 / 250g</span>
                     </div>
                 </div>
                 <div class="subdiv">
@@ -153,7 +153,7 @@
                             onclick="javascript:basket.checkItem();">&nbsp;</div>
                     <div class="img"><img src="../../../../images/강릉 블랜드.png" width="60"></div>
                     <div class="pname">
-                        <span>강릉 블렌드</span>
+                        <span>강릉 블렌드<br><br>에스프레소 / 250g</span>
                     </div>
                 </div>
                 <div class="subdiv">
@@ -190,7 +190,7 @@
         <div id="goorder" class="">
             <div class="clear"></div>
             <div class="buttongroup center-align cmd">
-                <a href="javascript:void(0);">선택한 상품 주문</a>
+                <a href="../결제/pay.jsp">선택한 상품 주문</a>
             </div>
         </div>
     </form>

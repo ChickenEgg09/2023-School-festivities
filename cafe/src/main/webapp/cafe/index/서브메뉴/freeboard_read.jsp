@@ -157,16 +157,31 @@ String loginid = (String) session.getAttribute("loginid");
 	<table width="1200" border="0" cellpadding="0" cellspacing="5" class="">
 		<tr>
 			<td align="right" width="450"><A
-				href="게시판.jsp?go=<%=request.getParameter("page")%>">
-					<img src="image/list.jpg" border=0>
+				href="게시판.jsp?go=<%=request.getParameter("page")%>"> <img
+					src="image/list.jpg" border=0>
 			</a></td>
-			<td width="70" align="right"><A
-				href="freeboard_rwrite.jsp?id=<%=request.getParameter("id")%>&page=<%=request.getParameter("page")%>">
-					<img src="image/reply.jpg" border=0>
-			</A></td>
-			<td width="70" align="right"><A
-				href="freeboard_upd.jsp?id=<%=id%>&page=1"><img
-					src="image/edit.jpg" border=0></A></td>
+			<td width="70" align="right">
+				<%
+				if (islogin == null) {
+				%> <a href="../가입/login.jsp" onclick="alert('로그인해주세요');"><img
+					src="image/reply.jpg" border="0" class="center-td"></a> <%
+ 				} else {
+ 					%> <A href="freeboard_rwrite.jsp?id=<%=request.getParameter("id")%>&page=<%=request.getParameter("page")%>">
+					<img src="image/reply.jpg" border=0></A><%
+					
+ 				}
+ 				%>
+			</td>
+			<td width="70" align="right">
+				<%
+				if (islogin == null) {
+				%> <a href="../가입/login.jsp" onclick="alert('로그인해주세요');"><img
+					src="image/edit.jpg" border="0" class="center-td"></a> <%
+ 				} else {
+ 					%> <A href="freeboard_upd.jsp?id=<%=id%>&page=1"><img src="image/edit.jpg" border=0></A><%
+ 				}
+ 				%>
+			</td>
 			<td width="70" align="right"><A
 				href="freeboard_del.jsp?id=<%=id%>&page=1"><img
 					src="image/del.jpg" border=0></A></td>
@@ -199,20 +214,16 @@ String loginid = (String) session.getAttribute("loginid");
 					<div class="sns">
 						<li><a
 							href="https://www.facebook.com/people/%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%95%A8%EB%A6%AC%EC%8A%A4/100069607637396/"
-							target="_blank"><img src="../../images/sns1.jpg"
-								alt="sns1"></a></li>
+							target="_blank"><img src="../../images/sns1.jpg" alt="sns1"></a></li>
 						<li><a href="https://cafegalleryalice.modoo.at/"
-							target="_blank"><img src="../../images/sns2.png"
-								alt="sns2"></a></li>
-						<li><a
-							href="https://www.instagram.com/galleryalice_cafe/"
-							target="_blank"><img src="../../images/sns3.jpg"
-								alt="sns3"></a></li>
+							target="_blank"><img src="../../images/sns2.png" alt="sns2"></a></li>
+						<li><a href="https://www.instagram.com/galleryalice_cafe/"
+							target="_blank"><img src="../../images/sns3.jpg" alt="sns3"></a></li>
 					</div>
 				</ul>
 			</div>
-			<div class="copye">Copyright ⓒ Gallery Alice All rights
-				20503 kim</div>
+			<div class="copye">Copyright ⓒ Gallery Alice All rights 20503
+				kim</div>
 		</div>
 	</footer>
 </BODY>

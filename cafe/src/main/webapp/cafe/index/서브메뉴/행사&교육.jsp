@@ -23,9 +23,7 @@ String loginid = (String) session.getAttribute("loginid");
 			<ul>
 				<li>
 					<div class="logo">
-						<a href="../home.jsp"> <img src="../../images/logo.png"
-							alt="로고">
-						</a>
+						<a href="../home.jsp"> 𝓖𝓪𝓵𝓵𝓮𝓻𝔂 𝓐𝓵𝓲𝓬𝓮 </a>
 					</div>
 				</li>
 				<li>
@@ -76,11 +74,23 @@ String loginid = (String) session.getAttribute("loginid");
 		<div class="wrapper">
 			<div class="tabmenu">
 				<ul class="tabmenu-wrap">
-					<li><a href="게시판.jsp">게시판</a></li>
+					<li><a href="게시판.jsp">자유 게시판</a></li>
 					<li><a href="공지사항.jsp">공지사항</a></li>
-					<li><a href="Q&A.jsp">Q&A</a></li>
 					<li class="active"><a href="행사&교육.jsp">행사&교육</a></li>
 				</ul>
+			</div>
+			<div class="list-noti">
+				<%
+				if (islogin == null) {
+				%>
+				<a href onclick="alert('권한이 부족합니다.');">글쓰기</a>
+				<%
+				} else {
+				%>
+				<a href onclick="alert('권한이 부족합니다.');">글쓰기</a>
+				<%
+				}
+				%>
 			</div>
 			<div class="noti">
 				<div class="noti-wrap">
@@ -117,31 +127,32 @@ String loginid = (String) session.getAttribute("loginid");
 				</div>
 			</div>
 		</div>
-		<footer>
-			<div class="bottom">
-				<div class="btlogo">
-					<img src="../../images/ftlogo.png" alt="하단로고">
-				</div>
-				<div class="copy">
-					<ul>
-						<li>상호 : Gallery Alice | 대표 : Cute | 주소 : 광명시 경기도 광명시 <br>
-							사업자등록번호 : 123-45-67890 | 전화번호 : 전화번호 : 02-1234-1234 | 이메일 :
-							qwer1234@naver.com
-						</li>
-						<div class="sns">
-							<li><a
-								href="https://www.facebook.com/people/%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%95%A8%EB%A6%AC%EC%8A%A4/100069607637396/"
-								target="_blank"><img src="../../images/sns1.jpg" alt="sns1"></a></li>
-							<li><a href="https://cafegalleryalice.modoo.at/"
-								target="_blank"><img src="../../images/sns2.png" alt="sns2"></a></li>
-							<li><a href="https://www.instagram.com/galleryalice_cafe/"
-								target="_blank"><img src="../../images/sns3.jpg" alt="sns3"></a></li>
-						</div>
-					</ul>
-				</div>
-				<div class="copye">Copyright ⓒ Gallery Alice All rights 20503
-					kim</div>
+	</div>
+	<footer>
+		<div class="bottom">
+			<div class="btlogo">
+				<img src="../../images/ftlogo.png" alt="하단로고">
 			</div>
-		</footer>
+			<div class="copy">
+				<ul>
+					<li>상호 : Gallery Alice | 대표 : Cute | 주소 : 광명시 경기도 광명시 <br>
+						사업자등록번호 : 123-45-67890 | 전화번호 : 전화번호 : 02-1234-1234 | 이메일 :
+						qwer1234@naver.com
+					</li>
+					<div class="sns">
+						<li><a
+							href="https://www.facebook.com/people/%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%95%A8%EB%A6%AC%EC%8A%A4/100069607637396/"
+							target="_blank"><img src="../../images/sns1.jpg" alt="sns1"></a></li>
+						<li><a href="https://cafegalleryalice.modoo.at/"
+							target="_blank"><img src="../../images/sns2.png" alt="sns2"></a></li>
+						<li><a href="https://www.instagram.com/galleryalice_cafe/"
+							target="_blank"><img src="../../images/sns3.jpg" alt="sns3"></a></li>
+					</div>
+				</ul>
+			</div>
+			<div class="copye">Copyright ⓒ Gallery Alice All rights 20503
+				kim</div>
+		</div>
+	</footer>
 </body>
 </html>

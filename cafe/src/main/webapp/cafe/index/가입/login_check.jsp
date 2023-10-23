@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -49,14 +49,14 @@
       conn.close();
 
       if(isLogin == true){
-          // out.print("·Î±×ÀÎ ¼º°ø");
-    	  out.print("<script> alert('"+loginId+"´Ô È¯¿µÇÕ´Ï´Ù!'); location.href='../home.jsp';</script>");
+          // out.print("ë¡œê·¸ì¸ ì„±ê³µ");
+    	  out.print("<script> alert('"+loginId+"ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤!'); location.href='../home.jsp';</script>");
     	  session.setAttribute("islogin", "ok");
     	  session.setAttribute("loginid", loginId);
           
       }else{   
-		// out.print("·Î±×ÀÎ ½ÇÆĞ");   
-      	  out.print("<script> alert('¾ÆÀÌµğ/ÆĞ½º¿öµå¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä');location.href='./login.jsp';</script>");
+		// out.print("ë¡œê·¸ì¸ ì‹¤íŒ¨");   
+      	  out.print("<script> alert('ì•„ì´ë””/íŒ¨ìŠ¤ì›Œë“œë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”');location.href='./login.jsp';</script>");
   	   	  
       }
         

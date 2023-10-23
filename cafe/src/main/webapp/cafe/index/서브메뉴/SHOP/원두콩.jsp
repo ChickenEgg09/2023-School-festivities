@@ -4,6 +4,7 @@
 
 	String islogin = (String)session.getAttribute("islogin");	
 	String loginid = (String)session.getAttribute("loginid");
+	String productName = request.getParameter("productName");
 %>
 <html lang="ko">
 
@@ -58,6 +59,7 @@
             </ul>
         </div>
     </header>
+    <input type="hidden" id="productName" value="<%= productName %>">
     <div class="wrap" style="margin-top: 30px">
         <div class="contents-shop">
             <div class="imgshop">
@@ -68,7 +70,9 @@
                     <h2 class="title">[갤러리 앨리스] 10월 원두콩</h2>
                     <span class="notes">
                         <em class="noteTit">
-                            "500g 31,000원"
+                            헤이즐넛의 고소한 풍미와<br>
+							바닐라의 달콤한 향이 조화로운 커피<br><br>
+							500g 31,000원
                         </em>
                     </span>
                     <em class="price">31,000원</em>
@@ -76,7 +80,7 @@
                 <div class="subInfo">
                     <dl class="infoList togType2">
                         <dt class>로스팅</dt>
-                        <dd class>2023.10.04</dd>
+                        <dd class>2023.10.18</dd>
                         <dt class>배송안내</dt>
                         <dd>
                             <p class="fs">예약 배송 상품과 일반 상품을 같이 구매하는 경우 예약 발송일에 함께 발송됩니다.</p>
@@ -129,7 +133,7 @@
                             총 상품금액 <span>0</span> 원
                         </div>
                     </div>
-                    <a href class="shop-pay">
+                    <a href="결제/pay.jsp" class="shop-pay">
                         구매하기
                     </a>
                     <a href class="shop-bask" id="shop-btn">

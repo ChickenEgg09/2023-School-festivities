@@ -4,7 +4,7 @@
 }
 
 .tabmenu-wrap {
-    width: 80%;
+    width: 60%;
     height: 200px;
 }
 
@@ -39,7 +39,7 @@
 
 .noti-wrap {
     width: 1200px;
-    height: 300px;
+    height: 350px;
     margin: 50px auto;
 }
 
@@ -200,4 +200,24 @@
     border-bottom: 1px solid #000;
     line-height: 100%;
     font-size: 1.4rem;
+}
+
+.list-noti {
+	width: 1200px;
+	height: 50px;
+	margin-bottom: 40px;
+}
+
+.list-noti a {
+	color: black;
+	background-color: yellow;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+	text-align: center;
+	margin-right: 50px;
+	font-size: 23px;
+	font-weight: 600;
+	border: 1px solid black;
 }
