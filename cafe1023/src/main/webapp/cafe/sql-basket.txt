@@ -1,0 +1,7 @@
+CREATE TABLE basket  
+   (	"EMAIL" VARCHAR2(50 BYTE), 
+	"NUM" NUMBER(9,0), 
+	"COUNTER" NUMBER(9,0)
+   ) ;
+
+commit;
