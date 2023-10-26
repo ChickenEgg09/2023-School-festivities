@@ -229,7 +229,8 @@ try {
                     </div>
                     <div id="shop-mon">
                         <div class="shop-money">
-                            총 상품금액 <span>0</span> 원
+                            총 상품금액 
+                            <span><%=pr_s%></span> 원
                         </div>
                     </div>
                     <a href="결제/pay.jsp" class="shop-pay">
