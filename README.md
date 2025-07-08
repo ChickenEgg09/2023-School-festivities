@@ -3,5 +3,5 @@
   1인 개발 <br>
   <br>
   개발 도구 : 이클립스 <br>
-  개발 언어 : jsp, html, css, js, sql <br>
+  개발 언어 : jsp, js, sql <br>
   기능  : 로그인, 회원가입, 장바구니, 게시판 <br>
