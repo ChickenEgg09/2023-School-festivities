@@ -4,5 +4,5 @@
   <br>
   개발 도구 : 이클립스 <br>
   개발 언어 : java, js <br>
-  DB : SQL <br>
+  DB : Oracle <br>
   기능  : 로그인, 회원가입, 장바구니, 게시판 <br>
